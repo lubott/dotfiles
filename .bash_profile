@@ -133,6 +133,20 @@ function dj() {
     return 0
 }
 
+
+function rr() {
+    # Moves files/directories to the trash
+
+    if [ -a $1 ]
+    then
+        mv $1 ~/.Trash/
+    else
+        echo "File/folder not found."
+    fi
+
+    return 0
+}
+
 ###########
 # Exports #
 ###########
